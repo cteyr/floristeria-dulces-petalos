@@ -40,6 +40,7 @@ const ListProduct = () => {
 
     return (
         <Flex
+            height="auto"
             direction="column"
             align="center"
             width="100%"
@@ -55,6 +56,7 @@ const ListProduct = () => {
                 {data?.map((flower: any) => (
                     <CardFlower
                         key={flower.id}
+                        id={flower.id}
                         name={flower.name}
                         scientificName={flower.binomialName}
                         price={flower.price}

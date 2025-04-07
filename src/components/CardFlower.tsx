@@ -1,14 +1,17 @@
 import { Flex, Text, Image } from "@chakra-ui/react"
 import { FiArrowUpRight } from "react-icons/fi";
+import { Link } from 'react-router-dom';
+
 
 interface CardComponentFlowerProps {
+    id: string;
     name: string;
     scientificName: string;
     imageUrl: string;
     price: number;
 }
 
-const CardFlower = ({ name, scientificName, imageUrl, price }: CardComponentFlowerProps) => {
+const CardFlower = ({ name, scientificName, imageUrl, price, id }: CardComponentFlowerProps) => {
     return (
         <Flex
 
@@ -16,7 +19,7 @@ const CardFlower = ({ name, scientificName, imageUrl, price }: CardComponentFlow
             <Flex
                 borderRadius="20px"
                 bg="#FFFFFF"
-                boxShadow="0px 3px 3px rgba(0, 0, 0, 0.1)" 
+                boxShadow="0px 3px 3px rgba(0, 0, 0, 0.1)"
                 p="10px"
                 flexDirection="column"
                 alignItems="center"
@@ -30,9 +33,9 @@ const CardFlower = ({ name, scientificName, imageUrl, price }: CardComponentFlow
                     alignItems="left"
                     width="100%"
                 >
-                    <Text fontSize="28px" fontWeight="700" letterSpacing="0">{name}</Text>
-                    <Text fontSize="16px" fontWeight="400" letterSpacing="0">{scientificName}</Text>
-                    
+                    <Text fontSize="28px" fontWeight="700" letterSpacing="0" color="#111111">{name}</Text>
+                    <Text fontSize="16px" fontWeight="400" letterSpacing="0" color="#606060" mt="10px">{scientificName}</Text>
+
                 </Flex>
                 <Image
                     width="100%"
@@ -51,20 +54,25 @@ const CardFlower = ({ name, scientificName, imageUrl, price }: CardComponentFlow
                     bg="#FFFFFF"
                     px="10px"
                     py="2px"
-                >   
+                >
                     €{price}
                 </Flex>
 
-                <Flex
-                    position="absolute"
-                    bottom="20px"
-                    right="20px"
-                    borderRadius="50%"
-                    bg="#FFFFFF"
-                    p="8px"
-                >   
-                    <FiArrowUpRight />
-                </Flex>
+                <Link to={`/detail/${id}`}>
+                    <Flex
+                        position="absolute"
+                        bottom="20px"
+                        right="20px"
+                        borderRadius="50%"
+                        bg="#FFFFFF"
+                        p="8px"
+                        cursor="pointer"
+                        _hover={{ bg: '#f0f0f0' }}
+                    >
+                        <FiArrowUpRight />
+                    </Flex>
+                </Link>
+
 
             </Flex>
         </Flex>

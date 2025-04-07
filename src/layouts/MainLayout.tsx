@@ -5,21 +5,23 @@ import { Flex } from '@chakra-ui/react'
 const MainLayout = () => {
     return (
         <Flex
+            height="100vh"
             align="center"
             flexDirection="column"
             width="100%"
-            height="100vh"
+            bg="#F9F9F9"
         >
             <Flex
                 width="100%"
                 justify="center"
+                bg="#FFFFFF"
             >
                 <Header />
             </Flex>
             <Flex
                 bg="#F9F9F9"
-                height="auto"
                 width="100%"
+                justify="center"
             >
                 <Outlet />
             </Flex>
