@@ -47,11 +47,10 @@ const DetailProduct = () => {
 
     return (
         <Flex
-          
             direction="column"
             align="center"
             w={{ base: '100%', sm: '90%', md: '80%', lg: '60%' }}
-            p="50px"
+            p={{ base: '30px', sm: '50px'}}
             px={{ base: '10px', sm: '20px' }}
         >
             <Flex
@@ -66,11 +65,13 @@ const DetailProduct = () => {
                 />
 
                 <Flex
-                    gap={10}
+                    flexDirection={{ base: 'column', sm: 'row' }}
+                    mt={{base: '10px', sm: '10px'}}
+                    gap={8}
                 >
                     <Image
-                        width="50%"
-                        height="100%"
+                        width={{ base: '100%', sm: '50%' }}
+                        height={{ base: '250px', sm: '100%' }}
                         objectFit="cover"
                         src={data?.imgUrl}
                         alt={data?.name}
@@ -80,8 +81,30 @@ const DetailProduct = () => {
                     <Flex
                         flexDirection="column"
                     >
-                        <Text fontSize='48px' fontWeight="700" lineHeight='72px' mb="60px">{data?.name}</Text>
-                        <Text fontSize="22px" fontWeight="700">€{data?.price}</Text>
+                        <Text 
+                            fontSize={{base: '38px', sm: '48px'}}
+                            fontWeight="700" 
+                            mb={{ base: '20px', sm: '60px' }}
+                        >
+                                {data?.name}
+                        </Text>
+
+                        <Text 
+                            display={{ base: 'flex', sm: 'none' }}
+                            fontSize='16px'
+                            fontWeight="400" 
+                            mb={{ base: '20px', sm: '60px' }}
+                        >
+                                {data?.name}
+                        </Text>
+
+
+                        <Text 
+                            fontSize="22px" 
+                            fontWeight="700"
+                        >
+                            €{data?.price}
+                        </Text>
 
                         <UnorderedList
                             pt="30px"
