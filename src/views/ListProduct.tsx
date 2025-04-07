@@ -3,12 +3,20 @@ import { useQuery } from "@tanstack/react-query";
 import { getFlowers } from '../middlewares/flowers';
 import { CardFlower } from '../components/CardFlower';
 import { Grid } from '@chakra-ui/react';
+import { Search } from '../components/Search';
+import { useState } from 'react';
 
 const ListProduct = () => {
+    const [InputValue, setInputValue] = useState("");
+
     const { isLoading, data, isError } = useQuery({
         queryKey: ['flowers'],
         queryFn: () => getFlowers(),
     });
+
+    const newFiltered = data?.filter((product: any) =>
+        product.name.toUpperCase().includes(InputValue.toUpperCase())
+    );
 
     if (isLoading) {
         return (
@@ -45,15 +53,27 @@ const ListProduct = () => {
             align="center"
             width="100%"
             p="50px"
-           
-            px={{base: '10px', sm: '20px'}}
+            px={{ base: '10px', sm: '20px' }}
+            gap="50px"
         >
+            <Flex
+                w={{ base: '100%', sm: '90%', md: '600px' }}
+            >
+                <Search
+                    placeholder="Busca en nuestra tienda"
+                    value={InputValue}
+                    handleInputChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                        setInputValue(e.target.value)
+                    }
+                />
+            </Flex>
+
             <Grid
-                templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }} 
+                templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
                 gap={6}
                 w={{ base: '100%', sm: '90%', md: '80%', lg: '60%' }}
             >
-                {data?.map((flower: any) => (
+                {newFiltered?.map((flower: any) => (
                     <CardFlower
                         key={flower.id}
                         id={flower.id}
