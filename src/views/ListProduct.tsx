@@ -74,7 +74,7 @@ const ListProduct = () => {
                 gap={6}
                 w={{ base: '100%', sm: '90%', md: '80%', lg: '60%' }}
             >
-                {newFiltered?.map((flower: any) => (
+                {newFiltered?.map((flower: Flower) => (
                     <CardFlower
                         key={flower.id}
                         id={flower.id}
