@@ -16,7 +16,7 @@ const CardFlower = ({ name, scientificName, imageUrl, price }: CardComponentFlow
             <Flex
                 borderRadius="20px"
                 bg="#FFFFFF"
-                boxShadow="0px 4px 20px rgba(0, 0, 0, 0.2)"
+                boxShadow="0px 3px 3px rgba(0, 0, 0, 0.1)" 
                 p="10px"
                 flexDirection="column"
                 alignItems="center"
