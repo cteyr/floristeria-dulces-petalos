@@ -107,9 +107,9 @@ const DetailProduct = () => {
                         </Text>
 
                         <UnorderedList
-                            pt="30px"
-                            pb="20px"
+                            py="30px"
                             pl="20px"
+                            spacing="10px"
                         >
                             <ListItem fontSize="14px" fontWeight="400">Regar {data?.wateringsPerWeek} vez por semana</ListItem>
                             <ListItem fontSize="14px" fontWeight="400">Fertilizar con {data?.fertilizerType}</ListItem>
