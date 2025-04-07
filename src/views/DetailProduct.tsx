@@ -50,7 +50,7 @@ const DetailProduct = () => {
             direction="column"
             align="center"
             w={{ base: '100%', sm: '90%', md: '80%', lg: '60%' }}
-            p={{ base: '30px', sm: '50px'}}
+            p={{ base: '40px', sm: '50px'}}
             px={{ base: '10px', sm: '20px' }}
         >
             <Flex
