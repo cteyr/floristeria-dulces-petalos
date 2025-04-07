@@ -49,7 +49,7 @@ const ListProduct = () => {
             px={{base: '10px', sm: '20px'}}
         >
             <Grid
-                templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', lg: 'repeat(3, 1fr)' }} 
+                templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }} 
                 gap={6}
                 w={{ base: '100%', sm: '90%', md: '80%', lg: '60%' }}
             >

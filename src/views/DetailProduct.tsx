@@ -65,12 +65,12 @@ const DetailProduct = () => {
                 />
 
                 <Flex
-                    flexDirection={{ base: 'column', sm: 'row' }}
+                    flexDirection={{ base: 'column', md: 'row' }}
                     mt={{base: '10px', sm: '10px'}}
-                    gap={8}
+                    gap={{ base: 10, sm: 8 }}
                 >
                     <Image
-                        width={{ base: '100%', sm: '50%' }}
+                        width={{ base: '100%', md: '50%' }}
                         height={{ base: '250px', sm: '100%' }}
                         objectFit="cover"
                         src={data?.imgUrl}
@@ -95,7 +95,7 @@ const DetailProduct = () => {
                             fontWeight="400" 
                             mb={{ base: '20px', sm: '60px' }}
                         >
-                                {data?.name}
+                                {data?.binomialName}
                         </Text>
 
 
