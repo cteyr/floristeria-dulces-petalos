@@ -17,8 +17,8 @@ const MainLayout = () => {
                 <Header />
             </Flex>
             <Flex
-                bg="#F0F0F0"
-                height="100%"
+                bg="#F9F9F9"
+                height="auto"
                 width="100%"
             >
                 <Outlet />
