@@ -111,7 +111,7 @@ const DetailProduct = () => {
                             pl="20px"
                             spacing="10px"
                         >
-                            <ListItem fontSize="14px" fontWeight="400">Regar {data?.wateringsPerWeek} vez por semana</ListItem>
+                            <ListItem fontSize="14px" fontWeight="400">Regar {data?.wateringsPerWeek} {data?.wateringsPerWeek > 1 ? "veces" : "vez"} por semana</ListItem>
                             <ListItem fontSize="14px" fontWeight="400">Fertilizar con {data?.fertilizerType}</ListItem>
                         </UnorderedList>
 
