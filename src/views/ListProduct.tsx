@@ -5,16 +5,17 @@ import { CardFlower } from '../components/CardFlower';
 import { Grid } from '@chakra-ui/react';
 import { Search } from '../components/Search';
 import { useState } from 'react';
+import { Flower } from '../type/Flower';
 
 const ListProduct = () => {
-    const [InputValue, setInputValue] = useState("");
+    const [InputValue, setInputValue] = useState <string> ("");
 
     const { isLoading, data, isError } = useQuery({
         queryKey: ['flowers'],
         queryFn: () => getFlowers(),
     });
 
-    const newFiltered = data?.filter((product: any) =>
+    const newFiltered = data?.filter((product: Flower) =>
         product.name.toUpperCase().includes(InputValue.toUpperCase())
     );
 
