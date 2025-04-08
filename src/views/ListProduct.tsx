@@ -1,6 +1,6 @@
 import { Text, Flex, Spinner, Alert, AlertIcon } from '@chakra-ui/react';
 import { useQuery } from "@tanstack/react-query";
-import { getFlowers } from '../middlewares/flowers';
+import { getFlowers } from '../middlewares/product';
 import { CardFlower } from '../components/CardFlower';
 import { Grid } from '@chakra-ui/react';
 import { Search } from '../components/Search';
