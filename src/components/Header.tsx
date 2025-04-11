@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <Flex p={4} align="center" bg="#FFFFFF">
+        <Flex p={4} align="center" bg="purewhite">
             <Link to="/">
                 <Image
                     boxSize="50px"

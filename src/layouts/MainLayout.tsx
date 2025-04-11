@@ -9,17 +9,17 @@ const MainLayout = () => {
             align="center"
             flexDirection="column"
             width="100%"
-            bg="#F9F9F9"
+            bg="white"
         >
             <Flex
                 width="100%"
                 justify="center"
-                bg="#FFFFFF"
+                bg="purewhite"
             >
                 <Header />
             </Flex>
             <Flex
-                bg="#F9F9F9"
+                bg="white"
                 width="100%"
                 justify="center"
             >

@@ -18,7 +18,7 @@ const CardFlower = ({ name, scientificName, imageUrl, price, id }: CardComponent
         >
             <Flex
                 borderRadius="20px"
-                bg="#FFFFFF"
+                bg="purewhite"
                 boxShadow="0px 3px 3px rgba(0, 0, 0, 0.1)"
                 p="10px"
                 flexDirection="column"
@@ -33,8 +33,25 @@ const CardFlower = ({ name, scientificName, imageUrl, price, id }: CardComponent
                     alignItems="left"
                     width="100%"
                 >
-                    <Text fontSize="28px" fontWeight="700" letterSpacing="0" color="#111111">{name}</Text>
-                    <Text fontSize="16px" fontWeight="400" letterSpacing="0" color="#606060" mt="10px">{scientificName}</Text>
+                    <Text 
+                        fontSize="28px" 
+                        fontWeight="700" 
+                        letterSpacing="0" 
+                        color="#111111" 
+                        fontFamily="heading"
+                    >
+                        {name}
+                    </Text>
+                    <Text 
+                        fontSize="16px" 
+                        fontWeight="400" 
+                        letterSpacing="0" 
+                        color="dark_grey" 
+                        mt="10px" 
+                        fontFamily="body"
+                    >
+                        {scientificName}
+                    </Text>
 
                 </Flex>
                 <Image
@@ -51,9 +68,10 @@ const CardFlower = ({ name, scientificName, imageUrl, price, id }: CardComponent
                     bottom="20px"
                     left="20px"
                     borderRadius="15px"
-                    bg="#FFFFFF"
+                    bg="purewhite"
                     px="10px"
                     py="2px"
+                    fontFamily="heading"
                 >
                     €{price}
                 </Flex>
@@ -64,7 +82,7 @@ const CardFlower = ({ name, scientificName, imageUrl, price, id }: CardComponent
                         bottom="20px"
                         right="20px"
                         borderRadius="50%"
-                        bg="#FFFFFF"
+                        bg="purewhite"
                         p="8px"
                         cursor="pointer"
                         _hover={{ bg: '#f0f0f0' }}

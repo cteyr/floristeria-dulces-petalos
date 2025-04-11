@@ -18,9 +18,10 @@ const Search = ({ placeholder, value, handleInputChange }: SearchProps) => {
         borderRadius="10px"
         bg="white"
         _focus={{ boxShadow: 'md' }}
+        fontFamily="body"
       />
       <InputLeftElement pointerEvents="none">
-        <IoIosSearch size="18px" color='#606060'/>
+        <IoIosSearch size="18px" color='dark_grey'/>
       </InputLeftElement>
     </InputGroup>
   );

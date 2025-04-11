@@ -117,13 +117,13 @@ const DetailProduct = () => {
 
                         <Button
                             borderRadius="20px"
-                            bg="#771E42"
-                            color="#FFFFFF"
+                            bg="bg_red"
+                            color="purewhite"
                             fontSize="14px"
                             fontWeight="400"
                             _hover={{
-                                bg: "#771E42",
-                                color: "#FFFFFF",
+                                bg: "bg_red",
+                                color: "purewhite",
                             }}
                         >
                             Añadir al carrito
