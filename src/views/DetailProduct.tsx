@@ -2,7 +2,7 @@ import { Text, Flex, Image, Spinner, Alert, AlertIcon, Button } from '@chakra-ui
 import { Breadcrumbs } from "../components/Breadcrumbs";
 import { useParams } from 'react-router-dom';
 import { useQuery } from "@tanstack/react-query";
-import { getFlowersById } from '../middlewares/product';
+import { getFlowersById } from '../services/product';
 import {
     ListItem,
     UnorderedList,
