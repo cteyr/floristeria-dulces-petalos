@@ -70,9 +70,9 @@ const ListProduct = () => {
             </Flex>
 
             <Grid
-                templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
+                templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
                 gap={6}
-                w={{ base: '100%', sm: '90%', md: '80%', lg: '60%' }}
+                w={{ base: '100%', sm: '90%', md: '80%', lg: '80%', xl: '60%' }}
             >
                 {newFiltered?.map((flower: Flower) => (
                     <CardFlower
