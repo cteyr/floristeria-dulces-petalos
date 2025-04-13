@@ -37,7 +37,7 @@ const CardFlower = ({ name, scientificName, imageUrl, price, id }: CardComponent
                         fontSize="28px" 
                         fontWeight="700" 
                         letterSpacing="0" 
-                        color="#111111" 
+                        color="black" 
                         fontFamily="heading"
                     >
                         {name}
@@ -86,7 +86,7 @@ const CardFlower = ({ name, scientificName, imageUrl, price, id }: CardComponent
                         bg="purewhite"
                         p="8px"
                         cursor="pointer"
-                        _hover={{ bg: '#f0f0f0' }}
+                        _hover={{ bg: 'light_grey' }}
                     >
                         <FiArrowUpRight />
                     </Flex>
