@@ -78,6 +78,7 @@ const CardFlower = ({ name, scientificName, imageUrl, price, id }: CardComponent
 
                 <Link to={`/detail/${id}`}>
                     <Flex
+                        id="card_link"
                         position="absolute"
                         bottom="20px"
                         right="20px"

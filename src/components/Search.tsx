@@ -12,6 +12,7 @@ const Search = ({ placeholder, value, handleInputChange }: SearchProps) => {
     <InputGroup>
       <Input
         type="text"
+        id="search_input"
         placeholder={placeholder}
         value={value}
         onChange={handleInputChange}
